@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,6 +11,8 @@ function Hero() {
   const heroRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
+    // if (!heroRef.current) return;
+
     ScrollTrigger.matchMedia({
       "(min-width:1024px)": () => {
         gsap.to("#herosec", {
@@ -20,10 +24,9 @@ function Hero() {
             end: "bottom top",
             scrub: 1,
             pin: true,
-            markers: true,
           },
         });
-      },
+      }, 
 
       "(max-width: 1023px)": () => {
         gsap.to("#herosec", {
@@ -33,23 +36,22 @@ function Hero() {
             start: "top top",
             end: "bottom top",
             scrub: true,
-            markers: true,
           },
         });
-      },
+      }, 
     });
   });
 
   return (
     <main
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center bg-neutral-100"
+      className="relative min-h-screen flex items-center justify-center bg-neutral-100"
     >
       {/* hero content */}
       <div className="w-full lg:p-2 xl:p-3 2xl:p-4 p-0">
         {/* HERO CARD */}
         <div
-          className="min-h-screen bg-blue-500 flex items-center justify-center shadow-lg rounded-none lg:rounded-2xl">
+          className="min-h-screen bg-cyan-400 flex items-center justify-center shadow-lg rounded-none lg:rounded-2xl">
           <section
             id="herosec"
             className="w-full md:w-[70%] lg:w-[50%] flex flex-col items-center text-center"
@@ -64,7 +66,7 @@ function Hero() {
                 conditions. All for only $17/month
               </p>
             </div>
-            <button className="bg-orange-200 w-full md:w-[40%] py-4 mt-8 rounded-xl hover:bg-orange-300 transition-colors">
+            <button className="bg-orange-200 w-full md:w-[40%] py-4 mt-8 rounded-xl hover:bg-orange-400 transition-colors">
               Join Today
             </button>
             <img

@@ -1,20 +1,36 @@
 "use client";
 
 import Link from "next/link";
-// import Image from "next/Image";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { fetchProductBundles } from "@/store/slices/productSlice";
+import { selectProductsByCategory } from "@/store/selectors/productSelectors";
 
 function Navbar() {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProductBundles());
+  }, [dispatch]);
+  const bundles = useAppSelector((state) => state.products.bundles);
+
+  console.log("BUNDLES IN NAVBAR:", bundles);
+  const loading = useAppSelector((state) => state.products.loading);
+  const categories = useAppSelector(selectProductsByCategory);
+  const categoryNames = Object.keys(categories);
+
+  console.log("CATEGORIES IN NAVBAR:", categories);
+  console.log("CATEGORY NAMES IN NAVBAR:", Object.keys(categories));
   return (
-    <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-900 shadow-sm">
-        <div className="flex align-middle items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div
-              className="w-32 lg:w-40"
-              onClick={() => <link href="/"></link>}
-            >
+    <header className="fixed top-0 left-0 right-0 z-50 lg:pt-8">
+      <div className="w-full px-3 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Floating Pill Container */}
+          <nav className="w-full flex items-center justify-between bg-gradient-to-r from-[#2a0f0a] to-[#140503] px-4 sm:px-6 lg:px-8 py-3 sm:py-4 shadow-xl backdrop-blur-md lg:rounded-full border border-white/10">
+            {/* LEFT — Logo */}
+            <Link href="/" className="w-28 sm:w-32 lg:w-40 text-white">
               <svg
+                className="text-white"
                 width="100%"
                 height="100%"
                 viewBox="0 0 222 30"
@@ -26,23 +42,37 @@ function Navbar() {
                   fill="currentColor"
                 ></path>
               </svg>
-            </div>
-          </div>
-          <div className="flex items-center justify-center text-white">
-            Rendered Categories
-          </div>
+            </Link>
 
-          <div className="flex items-center space-x-4">
-            <button className="text-white font-medium">
-                Log In
-            </button>
-            <button className="bg-orange-500 text-white px-6 py-2 rounded-full">
+            {/* CENTER — Dynamic Categories (Placeholder Now) */}
+            <div className="hidden lg:flex items-center gap-8 text-white font-medium">
+              {loading && <span>Loading...</span>}
+
+              {!loading &&
+                categoryNames.map((category) => (
+                  <span
+                    key={category}
+                    className="cursor-pointer hover:text-orange-400 transition"
+                  >
+                    {category}
+                  </span>
+                ))}
+            </div>
+
+            {/* RIGHT — Auth + CTA */}
+            <div className="flex items-center gap-6">
+              <button className="cursor-pointer text-white font-medium hover:text-orange-400 transition">
+                Login
+              </button>
+
+              <button className="cursor-pointer hidden lg:block bg-orange-500 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg hover:shadow-orange-500/30">
                 Try Superpower
-            </button>
-          </div>
+              </button>
+            </div>
+          </nav>
         </div>
-      </nav>
-    </>
+      </div>
+    </header>
   );
 }
 
