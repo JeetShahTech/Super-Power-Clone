@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import IntroSection from "@/components/labsintro";
+import HowItWorks from "@/components/howitworks";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <>
     <Hero></Hero>
     <IntroSection></IntroSection>
+    <HowItWorks></HowItWorks>
     </>
   );
 }
