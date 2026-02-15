@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import  { StoreProvider } from "@/store/provider";
 import StoreInitializer from "./StoreInitializor";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,6 +23,7 @@ export default function RootLayout({
           <StoreInitializer />
           <Navbar />
           {children}
+          <Footer />
         </StoreProvider>
       </body>
     </html>
