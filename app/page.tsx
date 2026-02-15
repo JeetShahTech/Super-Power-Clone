@@ -7,6 +7,8 @@ import IntroSection from "@/components/labsintro";
 import HowItWorks from "@/components/howitworks";
 import MembershipSection from "@/components/membership/membershipsection";
 import ProductsSection from "@/components/products/ProductsSection";
+import TestimonialsSection from "@/components/testimonials/testimonialsection";
+import FaqSection from "@/components/faq/faqSection";
 
 
 export default function Home() {
@@ -17,6 +19,8 @@ export default function Home() {
     <HowItWorks></HowItWorks>
     <ProductsSection />
     <MembershipSection />
+    <TestimonialsSection />
+    <FaqSection />
     </>
   );
 }

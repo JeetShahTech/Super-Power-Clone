@@ -7,11 +7,6 @@ import { fetchProductBundles } from "@/store/slices/productSlice";
 import { selectProductsByCategory } from "@/store/selectors/productSelectors";
 
 function Navbar() {
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(fetchProductBundles());
-  }, [dispatch]);
   const bundles = useAppSelector((state) => state.products.bundles);
 
   console.log("BUNDLES:", bundles);
