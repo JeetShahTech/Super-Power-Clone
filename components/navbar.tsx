@@ -1,20 +1,33 @@
 "use client";
 
 import Link from "next/link";
-// import Image from "next/Image";
 import { useState, useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { fetchProductBundles } from "@/store/slices/productSlice";
+import { selectProductsByCategory } from "@/store/selectors/productSelectors";
 
 function Navbar() {
+  const bundles = useAppSelector((state) => state.products.bundles);
+
+  console.log("BUNDLES:", bundles);
+  const loading = useAppSelector((state) => state.products.loading);
+  const categories = useAppSelector(selectProductsByCategory);
+  
+  const categoryNames = Object.keys(categories);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  console.log("CATEGORIES:", categories);
+  console.log("CATEGORY NAMES:", Object.keys(categories));
   return (
-    <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-900 shadow-sm">
-        <div className="flex align-middle items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div
-              className="w-32 lg:w-40"
-              onClick={() => <link href="/"></link>}
-            >
+    <header className="fixed top-0 left-0 right-0 z-50 lg:pt-8 overflow-visible">
+      <div className="w-full lg:px-8">
+        {/* Floating Pill Container */}
+        <nav className="w-full flex items-center bg-gradient-to-r from-[#474342] to-[#4b403f] px-4 lg:px-8 py-3 shadow-xl backdrop-blur-md lg:max-w-7xl lg:mx-auto lg:rounded-full border border-white/10 overflow-visible">
+          <div className="flex flex-1 items-center min-w-0">
+            {/* LEFT — Logo */}
+            <Link href="/" className="w-28 sm:w-32 lg:w-40 text-white">
               <svg
+                className="text-white"
                 width="100%"
                 height="100%"
                 viewBox="0 0 222 30"
@@ -26,23 +39,76 @@ function Navbar() {
                   fill="currentColor"
                 ></path>
               </svg>
-            </div>
-          </div>
-          <div className="flex items-center justify-center text-white">
-            Rendered Categories
+            </Link>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <button className="text-white font-medium">
-                Log In
+          {/* CENTER — Dynamic Categories (Placeholder Now) */}
+          <div className="hidden lg:flex flex-[2] justify-center min-w-0">
+            <div className="flex items-center gap-8 cursor-pointer text-white hover:text-gray-500 font-medium relative">
+              {loading && <span>Loading...</span>}
+
+              {!loading &&
+                categoryNames.map((category) => (
+                  <div
+                    key={category}
+                    className="relative cursor-pointer hover:text-white transition"
+                    onMouseEnter={() => setActiveCategory(category)}
+                    onMouseLeave={() => setActiveCategory(null)}
+                  >
+                    {category}
+
+                    {/* DROPDOWN */}
+                    {activeCategory === category && (
+                      <div className="absolute top-full left-1/2 -translate-x-1/2  w-[560px] bg-white text-black shadow-2xl p-6 z-[999]">
+                        <div className="flex gap-6">
+                          {/* LEFT — CATEGORY IMAGE */}
+                          <div className="w-[45%]">
+                            <img
+                              src={categories[category]?.[0]?.imageUrl}
+                              className="w-full h-full object-contain rounded-xl"
+                              alt={category}
+                            />
+                          </div>
+
+                          {/* RIGHT — PRODUCT LIST */}
+                          <div className="flex-1 grid grid-cols-2 gap-x-8 gap-y-3 content-center">
+                            {categories[category]?.map((product) => (
+                              <div
+                                key={product.id}
+                                className="cursor-pointer hover:text-orange-500 transition font-medium text-sm"
+                              >
+                                {product.name}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+            </div>
+          </div>
+
+
+          {/* RIGHT — Auth + CTA */}
+          <div className="flex flex-1 justify-end items-center gap-6 min-w-0">
+            <button
+              onClick={() =>
+                (window.location.href =
+                  "https://app.superpower.com/signin?_gl=1*1e7ruqg*_gcl_au*Njg1MzY2MTk3LjE3NzAwMTU2Mjg.*_ga*MTg3NTk2MzkyLjE3NzAwMTU2Mjg.*_ga_BT53JGR46J*czE3NzA4MDU1NzkkbzI3JGcxJHQxNzcwODA1NTk4JGo0MSRsMCRoMA..")
+              }
+              className="cursor-pointer text-white font-medium hover:text-orange-400 transition"
+            >
+              Login
             </button>
-            <button className="bg-orange-500 text-white px-6 py-2 rounded-full">
-                Try Superpower
+
+            <button className="cursor-pointer hidden lg:block bg-orange-500 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg hover:shadow-orange-500/30">
+              Try Superpower
             </button>
           </div>
-        </div>
-      </nav>
-    </>
+        </nav>
+      </div>
+    </header>
   );
 }
 
