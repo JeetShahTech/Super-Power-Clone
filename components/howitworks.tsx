@@ -99,7 +99,8 @@ function HowItWorks() {
     gsap.matchMedia().add("(max-width: 767px)", () => {
       gsap.fromTo(
         ".progress-line-mobile",
-        { scaleY: 0 },
+        { scaleY: 0, transformOrigin: "center" },
+
         {
           scaleY: 1,
           ease: "none",
