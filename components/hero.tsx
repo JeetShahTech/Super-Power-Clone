@@ -65,7 +65,7 @@ function Hero() {
                 conditions. All for only $17/month
               </p>
             </div>
-            <button className="cursor-pointer bg-orange-400 w-full md:w-[40%] py-4 mt-8 rounded-xl hover:bg-orange-500 shadow-2xl transition-colors flex items-center justify-center gap-2">
+            <button className="cursor-pointer bg-orange-400 w-[40%] py-4 mt-8 rounded-xl hover:bg-orange-500 shadow-2xl transition-colors flex items-center justify-center gap-2">
               <span>Join Today</span>
 
               <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5">

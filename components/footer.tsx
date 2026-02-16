@@ -120,22 +120,37 @@ export default function Footer() {
   return (
     <footer className="bg-white pt-28 pb-14 mt-40">
       {/* Masked Logo */}
-      <div className="mb-20 px-6 max-w-[1100px] mx-auto">
-        <div className="logo-mask relative">
-          {/* height sizer */}
-          <img src={maskUrl} alt="" className="w-full invisible" />
+      <div className="logo-mask">
+        {/* SVG defines the mask shape */}
+        <img
+          className="logo-sizer"
+          src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/65b8f55bef05d8426623a612_sp-logo-black.svg"
+          alt=""
+          aria-hidden="true"
+        />
 
-          {/* video fill */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          >
-            <source src="https://superpower-website.b-cdn.net/sp-logo-footer-bg.mp4" />
-          </video>
-        </div>
+        {/* video */}
+        <video
+          className="masked-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68dfd7d87857d2aa8e2cb7a2_sp-still-bg-mask.jpg"
+        >
+          <source
+            src="https://superpower-website.b-cdn.net/sp-logo-footer-bg.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        {/* fallback */}
+        <img
+          className="logo-fallback"
+          src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/65b8f55bef05d8426623a612_sp-logo-black.svg"
+          alt="Superpower"
+        />
       </div>
 
       {/* Columns */}

@@ -5,6 +5,7 @@ import GuideSection from "@/components/HIWPage/GuideSection";
 import HeroHIW from "@/components/HIWPage/HeroHIW";
 import StepsProcess from "@/components/HIWPage/StepsProcess";
 import MembershipSection from "@/components/membership/membershipsection";
+import Statistics from "@/components/statistics.tsx/statisticssection";
 import TestimonialsSection from "@/components/testimonials/testimonialsection";
 
 export default function HowItWorksPage() {
@@ -14,6 +15,7 @@ export default function HowItWorksPage() {
       <GetClarityIntro />
       <StepsProcess />
       <GuideSection />
+      <Statistics />
       <ActionPlan />
       <MembershipSection />
       <TestimonialsSection />

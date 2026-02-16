@@ -40,7 +40,7 @@ function ActionPlan() {
   return (
     <section
       id="actionplan"
-      className="w-full flex flex-col items-center py-24 md:py-36 px-6 overflow-hidden"
+      className="w-full flex flex-col items-center py-16 md:py-24 px-6 overflow-hidden"
     >
       <div className="w-full max-w-7xl flex flex-col gap-10">
 
@@ -55,10 +55,10 @@ function ActionPlan() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 min-[991px]:grid-cols-2 gap-10 lg:gap-14 w-full">
+        <div className="grid grid-cols-1 min-[1024px]:grid-cols-2 gap-10 lg:gap-14 w-full">
 
           {/* SUPERPOWER PLAN */}
-          <div className="relative bg-white border border-[#fc5f2b] rounded-[2.25rem] p-10 md:p-14 h-[440px] md:h-[520px] overflow-hidden flex flex-col">
+          <div className="relative bg-white border border-[#fc5f2b] rounded-[2.25rem] p-10 md:p-14 h-[360px] md:h-[420px] overflow-hidden flex flex-col">
 
             {/* Logo */}
             <div className="relative z-20 flex flex-col items-start w-fit">
@@ -75,7 +75,7 @@ function ActionPlan() {
             </div>
 
             {/* Button */}
-            <div className="relative z-20 mt-auto pt-10">
+            <div className="relative z-20 mt-auto pt-6">
               <ViewSample isBlack={true} />
             </div>
 
@@ -101,7 +101,7 @@ function ActionPlan() {
           </div>
 
           {/* GENERAL CHECKUP */}
-          <div className="relative bg-[#f4f4f4] rounded-[2.25rem] p-10 md:p-14 h-[440px] md:h-[520px] overflow-hidden flex flex-col">
+          <div className="relative bg-[#f4f4f4] rounded-[2.25rem] p-10 md:p-14 h-[360px] md:h-[420px] overflow-hidden flex flex-col">
 
             <div className="relative z-20">
               <h3 className="text-xl font-medium text-black">
@@ -109,7 +109,7 @@ function ActionPlan() {
               </h3>
             </div>
 
-            <div className="relative z-20 mt-auto pt-10">
+            <div className="relative z-20 mt-auto pt-6">
               <ViewSample isBlack={false} />
             </div>
 

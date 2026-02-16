@@ -3,3 +3,50 @@
 html, body {
     overflow-x: hidden;
 }
+
+.logo-mask {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* keeps aspect ratio */
+.logo-sizer {
+  width: 100%;
+  visibility: hidden;
+}
+
+/* VIDEO FILLS ONLY SVG SHAPE */
+.masked-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  mask-image: url("https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/65b8f55bef05d8426623a612_sp-logo-black.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  -webkit-mask-image: url("https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/65b8f55bef05d8426623a612_sp-logo-black.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+/* fallback when mask unsupported */
+.logo-fallback {
+  display: none;
+}
+
+@supports not (mask-image: url("")) {
+  .masked-video {
+    display: none;
+  }
+  .logo-fallback {
+    display: block;
+    width: 100%;
+  }
+}
