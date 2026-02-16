@@ -94,9 +94,9 @@ function IntroSection() {
         </div>
 
         {/* DESKTOP */}
-        <div className="hidden md:flex w-full h-[65vh] flex-shrink items-stretch gap-6 relative">
+        <div className="hidden md:flex w-full flex-shrink items-stretch gap-6 relative">
           {/* LEFT IMAGE */}
-          <div className="w-[20%] min-w-0 h-full relative">
+          <div className="w-[20%] min-w-0 relative">
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68a7a9565b28afd609739daa_Superpower%20Score.avif"
               className="w-full h-full object-cover rounded-2xl"
@@ -106,7 +106,7 @@ function IntroSection() {
 
           {/* CENTER VIDEO */}
           <div className="w-[60%] relative">
-            <div className="w-full aspect-[16/10] rounded-3xl overflow-hidden relative border-10 border-black">
+            <div className="w-full rounded-3xl overflow-hidden relative border-10 border-black">
               {/* VIDEO */}
               <video autoPlay muted loop playsInline>
                 <source
