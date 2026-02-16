@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Tilt from "react-parallax-tilt";
 
@@ -55,11 +57,7 @@ export default function MembershipVisualTabs() {
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`
-              rounded-xl
-              overflow-hidden
-              border
-              transition
+            className={`rounded-xl overflow-hidden border transition
               ${
                 activeTab === index
                   ? "border-orange-500 scale-105"
