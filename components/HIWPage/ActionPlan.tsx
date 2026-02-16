@@ -8,9 +8,10 @@ function ViewSample({ isBlack }: { isBlack: boolean }) {
     <a
       href="#"
       className={`group flex items-center justify-center gap-2 rounded-full w-[160px] h-[52px] font-medium transition-all
-      ${isBlack
-        ? "text-white bg-black hover:bg-neutral-800"
-        : "text-black bg-white hover:bg-neutral-100 shadow-sm"
+      ${
+        isBlack
+          ? "text-white bg-black hover:bg-neutral-800"
+          : "text-black bg-white hover:bg-neutral-100 shadow-sm"
       }`}
     >
       View sample
@@ -43,7 +44,6 @@ function ActionPlan() {
       className="w-full flex flex-col items-center py-16 md:py-24 px-6 overflow-hidden"
     >
       <div className="w-full max-w-7xl flex flex-col gap-10">
-
         {/* Heading */}
         <div className="flex flex-col gap-3">
           <h2 className="text-[2.4rem] md:text-[3.4rem] font-semibold tracking-[-0.02em]">
@@ -56,10 +56,8 @@ function ActionPlan() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 min-[1024px]:grid-cols-2 gap-10 lg:gap-14 w-full">
-
           {/* SUPERPOWER PLAN */}
-          <div className="relative bg-white border border-[#fc5f2b] rounded-[2.25rem] p-10 md:p-14 h-[360px] md:h-[420px] overflow-hidden flex flex-col">
-
+          <div className="group relative bg-white border border-[#fc5f2b] rounded-[2.25rem] p-10 md:p-14 h-[360px] md:h-[420px] overflow-hidden flex flex-col">
             {/* Logo */}
             <div className="relative z-20 flex flex-col items-start w-fit">
               <Image
@@ -85,12 +83,12 @@ function ActionPlan() {
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf490357c25d2fac6cc61f_Nature%20Superpower%201.avif"
                 fill
                 alt="Background Design"
-                className="object-cover object-right opacity-40 scale-125"
+                className="object-cover object-right opacity-60 scale-120"
               />
             </div>
 
             {/* Floating document */}
-            <div className="absolute right-[-12%] bottom-[-18%] w-[85%] h-[120%] z-10 pointer-events-none">
+            <div className="absolute right-[-12%] bottom-[-18%] w-[85%] h-[100%] z-10 transition-transform duration-500 ease-out group-hover:scale-105">
               <Image
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68ddb5146c331cb64685a697_Frame%2016.avif"
                 fill
@@ -101,8 +99,7 @@ function ActionPlan() {
           </div>
 
           {/* GENERAL CHECKUP */}
-          <div className="relative bg-[#f4f4f4] rounded-[2.25rem] p-10 md:p-14 h-[360px] md:h-[420px] overflow-hidden flex flex-col">
-
+          <div className="group relative bg-[#f4f4f4] rounded-[2.25rem] p-10 md:p-14 h-[360px] md:h-[420px] overflow-hidden flex flex-col">
             <div className="relative z-20">
               <h3 className="text-xl font-medium text-black">
                 General check up
@@ -114,7 +111,7 @@ function ActionPlan() {
             </div>
 
             {/* Floating document */}
-            <div className="absolute right-[-12%] bottom-[-18%] w-[85%] h-[120%] pointer-events-none">
+            <div className="absolute right-[-12%] bottom-[-18%] w-[85%] h-[100%] z-10 transition-transform duration-500 ease-out group-hover:scale-105">
               <Image
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf49e24405bd4261bb8306_Group%201321315803.avif"
                 fill
@@ -150,7 +147,6 @@ function ActionPlan() {
             </svg>
           </a>
         </div>
-
       </div>
     </section>
   );

@@ -17,7 +17,6 @@ function HowItWorks() {
           end: "bottom top",
           pin: true,
           scrub: 1,
-          markers: true,
         },
       });
 
@@ -118,14 +117,14 @@ function HowItWorks() {
   return (
     <section
       ref={sectionRef}
-      className="bg-blue-50 py-20 relative overflow-hidden"
+      className="bg-blue-50 py-5 relative overflow-hidden"
     >
       {/* TITLE */}
       <div className="max-w-7xl mx-auto px-4 mb-16">
         <h1 className="text-3xl md:text-5xl font-serif">How it Works</h1>
       </div>
 
-      <div className="absolute left-0 right-0 top-[496px] w-full z-0">
+      <div className="absolute left-0 right-0 top-[436px] w-full z-0">
         <div className="progress-line h-[2px] bg-orange-400 origin-left scale-x-0" />
       </div>
 
