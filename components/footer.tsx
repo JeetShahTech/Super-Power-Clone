@@ -118,10 +118,10 @@ export default function Footer() {
     "https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/65b8f55bef05d8426623a612_sp-logo-black.svg";
 
   return (
-    <footer className="bg-white pt-28 pb-14 mt-40">
+    <footer className="bg-gray-200 rounded-[70px] pt-28 pb-14 mt-16">
       {/* Masked Logo */}
       <div className="logo-mask">
-        {/* SVG defines the mask shape */}
+        
         <img
           className="logo-sizer"
           src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/65b8f55bef05d8426623a612_sp-logo-black.svg"
@@ -129,7 +129,6 @@ export default function Footer() {
           aria-hidden="true"
         />
 
-        {/* video */}
         <video
           className="masked-video"
           autoPlay
@@ -154,7 +153,7 @@ export default function Footer() {
       </div>
 
       {/* Columns */}
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-5 gap-8">
+      <div className="w-full mx-auto px-6 grid md:grid-cols-5 gap-8">
         {/* First 4 columns */}
         {mainColumns.map((col, i) => (
           <FooterColumn key={i} title={col.title} items={col.items} />
@@ -169,7 +168,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t text-sm text-zinc-500 flex flex-col md:flex-row justify-between gap-4">
+      <div className="w-full mx-auto px-6 mt-20 pt-8 border-t text-sm text-zinc-500 flex flex-col md:flex-row justify-between gap-4">
         <p>
           © {new Date().getFullYear()} Superpower Health, Inc. All rights
           reserved

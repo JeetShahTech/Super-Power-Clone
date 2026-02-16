@@ -12,7 +12,7 @@ function Navbar() {
   console.log("BUNDLES:", bundles);
   const loading = useAppSelector((state) => state.products.loading);
   const categories = useAppSelector(selectProductsByCategory);
-  
+
   const categoryNames = Object.keys(categories);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
@@ -89,22 +89,29 @@ function Navbar() {
             </div>
           </div>
 
-
           {/* RIGHT — Auth + CTA */}
           <div className="flex flex-1 justify-end items-center gap-6 min-w-0">
-            <button
-              onClick={() =>
-                (window.location.href =
-                  "https://app.superpower.com/signin?_gl=1*1e7ruqg*_gcl_au*Njg1MzY2MTk3LjE3NzAwMTU2Mjg.*_ga*MTg3NTk2MzkyLjE3NzAwMTU2Mjg.*_ga_BT53JGR46J*czE3NzA4MDU1NzkkbzI3JGcxJHQxNzcwODA1NTk4JGo0MSRsMCRoMA..")
-              }
+            <Link
+              href="/howitworkspage"
+              className="cursor-pointer text-white font- hover:text-orange-400 transition"
+            >
+              How it Works
+            </Link>
+            
+            <a
+              href="https://app.superpower.com/signin?_gl=1*1e7ruqg*_gcl_au*Njg1MzY2MTk3LjE3NzAwMTU2Mjg.*_ga*MTg3NTk2MzkyLjE3NzAwMTU2Mjg.*_ga_BT53JGR46J*czE3NzA4MDU1NzkkbzI3JGcxJHQxNzcwODA1NTk4JGo0MSRsMCRoMA.."
               className="cursor-pointer text-white font-medium hover:text-orange-400 transition"
             >
               Login
-            </button>
+            </a>
 
-            <button className="cursor-pointer hidden lg:block bg-orange-500 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg hover:shadow-orange-500/30">
+            
+            <a
+              href="https://app.superpower.com/register"
+              className="cursor-pointer hidden lg:block bg-orange-500 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg hover:shadow-orange-500/30"
+            >
               Try Superpower
-            </button>
+            </a>
           </div>
         </nav>
       </div>

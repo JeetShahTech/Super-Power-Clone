@@ -43,6 +43,11 @@ export default function Statistics() {
       ) => {
         const obj = { val: 0 };
 
+        // 👉 set bar + marker instantly (ONLY ONCE)
+        if (barRef?.current) barRef.current.style.width = `${target}%`;
+        if (markRef?.current) markRef.current.style.left = `${target}%`;
+
+        // 👉 animate only number
         tl.to(
           obj,
           {
@@ -50,15 +55,9 @@ export default function Statistics() {
             duration: 1.4,
             ease: "power2.out",
             onUpdate: () => {
-              const v = Math.round(obj.val);
-
-              if (numberRef.current !== null)
-                numberRef.current.textContent = v.toString();
-
-              if (barRef?.current !== null && barRef?.current !== undefined) gsap.set(barRef.current, { width: v + "%" });
-
-              if (markRef?.current !== null && markRef?.current !== undefined)
-                gsap.set(markRef.current, { left: v + "%" });
+              if (numberRef.current) {
+                numberRef.current.textContent = Math.round(obj.val).toString();
+              }
             },
           },
           0,

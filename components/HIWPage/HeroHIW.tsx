@@ -22,9 +22,9 @@ function Dot({ text, className }: { text: string; className: string }) {
 
 export default function HeroHIW() {
   return (
-    <section className="w-full flex justify-center mt-3">
+    <section className="w-full flex justify-center lg:p-2">
       {/* HERO CARD */}
-      <div className="relative w-[96%] h-[450px] md:h-[500px] lg:h-[560px] rounded-[16px] overflow-hidden flex items-center bg-[radial-gradient(circle_at_60%,#7a725f,#464133)]">
+      <div className="relative w-[100%] h-[450px] md:h-[500px] lg:h-[560px] lg:rounded-[16px] overflow-hidden flex items-center bg-[radial-gradient(circle_at_60%,#7a725f,#464133)]">
         {/* LEFT CONTENT */}
         <div className="relative z-10 w-full lg:w-1/2 pl-8 md:pl-14 lg:pl-20 pr-6">
           <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.05]">
