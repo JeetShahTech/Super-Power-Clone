@@ -92,7 +92,7 @@ function FooterColumn({ title, items }: { title: string; items: string[] }) {
                 {/* Chevron Icon */}
                 <img
                   src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/66668bc209003e2545cbca73_chevron-orange.svg"
-                  alt=""
+                  alt="footer icon"
                   className="w-2.5 h-2.5 mt-[2px] shrink-0"
                 />
                 <span>
@@ -126,7 +126,7 @@ export default function Footer() {
         <img
           className="logo-sizer"
           src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/65b8f55bef05d8426623a612_sp-logo-black.svg"
-          alt=""
+          alt="superpower logo"
           aria-hidden="true"
         />
 

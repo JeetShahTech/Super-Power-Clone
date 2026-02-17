@@ -7,6 +7,21 @@ import StepsProcess from "@/components/HIWPage/StepsProcess";
 import MembershipSection from "@/components/membership/membershipsection";
 import Statistics from "@/components/statistics.tsx/statisticssection";
 import TestimonialsSection from "@/components/testimonials/testimonialsection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "How It Works | Superpower",
+  description:
+    "Learn how Superpower works",
+  openGraph: {
+    title: "How It Works | Superpower",
+    description:
+      "Learn how Superpower works",
+    url: "https://main.d3mcl4t2n25ylc.amplifyapp.com/howitworkspage",
+    siteName: "Superpower-Clone",
+    type: "website",
+  },
+};
 
 export default function HowItWorksPage() {
   return (

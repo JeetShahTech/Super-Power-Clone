@@ -46,6 +46,7 @@ export default function MembershipVisualTabs() {
         ) : (
           <img
             src={tabs[activeTab].main}
+            alt="Membership feature preview"
             className="w-full h-auto rounded-xl"
           />
         )}
@@ -65,7 +66,11 @@ export default function MembershipVisualTabs() {
               }
             `}
           >
-            <img src={tab.thumb} className="w-16 h-16 object-cover" />
+            <img
+              src={tab.thumb}
+              alt="thumbnail"
+              className="w-16 h-16 object-cover"
+            />
           </button>
         ))}
       </div>
@@ -81,7 +86,7 @@ function MembershipCardVisual() {
       tiltMaxAngleY={6}
       perspective={1400}
       transitionSpeed={500}
-      scale={1} 
+      scale={1}
       glareEnable={false}
       gyroscope={false}
       className="relative w-full h-full"

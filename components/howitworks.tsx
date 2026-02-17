@@ -138,6 +138,7 @@ function HowItWorks() {
             {/* IMAGE */}
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed15e90d22210f8cc53_Img%20Frame.avif"
+              alt="test-image"
               className="w-full h-[240px] object-contain rounded-xl mb-10"
             />
 
@@ -162,6 +163,7 @@ function HowItWorks() {
           <div id="col-2" className="relative z-10">
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed15e90d22210f8cc56_Img%20Frame-1.avif"
+              alt="Results image"
               className="w-full h-[240px] object-contain rounded-xl mb-10"
             />
 
@@ -182,6 +184,7 @@ function HowItWorks() {
           <div id="col-3" className="relative z-10">
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed1b9ed1cceda29fecc_Img%20Frame-2.avif"
+              alt="additional ecosystem"
               className="w-full h-[240px] object-contain rounded-xl mb-10"
             />
 
@@ -217,6 +220,7 @@ function HowItWorks() {
             <div>
               <img
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed15e90d22210f8cc53_Img%20Frame.avif"
+                alt="test-image"
                 className="w-full h-auto max-w-none h-[200px] object-cover rounded-xl mb-4"
               />
 
@@ -241,6 +245,7 @@ function HowItWorks() {
             <div>
               <img
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed15e90d22210f8cc56_Img%20Frame-1.avif"
+                alt="Results image"
                 className="w-full h-auto max-w-none h-[200px] object-cover rounded-xl mb-4"
               />
 
@@ -263,6 +268,7 @@ function HowItWorks() {
             <div>
               <img
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed1b9ed1cceda29fecc_Img%20Frame-2.avif"
+                alt="additional ecosystem"
                 className="w-full h-auto max-w-none h-[200px] object-cover rounded-xl mb-4"
               />
 
