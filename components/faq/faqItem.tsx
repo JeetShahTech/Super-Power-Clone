@@ -16,6 +16,7 @@ export default function FaqItem({ question, answer, open, onClick }: Props) {
   return (
     <div className="border-b border-gray-200 py-6">
       <button
+      aria-label="faqitem"
         onClick={onClick}
         className="cursor-pointer w-full flex justify-between items-center text-left"
       >

@@ -63,6 +63,7 @@ function FooterColumn({ title, items }: { title: string; items: string[] }) {
     <div className="border-b md:border-none py-4">
       {/* Heading */}
       <button
+      aria-label="footeritem"
         onClick={() => setOpen(!open)}
         className="flex justify-between w-full items-center"
       >

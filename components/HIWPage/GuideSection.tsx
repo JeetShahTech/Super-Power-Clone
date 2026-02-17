@@ -73,6 +73,7 @@ export default function GuideSection() {
           {/* BUTTONS */}
           <div className="flex gap-3">
             <button
+              aria-label="scroll left"
               disabled={!canLeft}
               onClick={() => scroll("left")}
               className="size-11 rounded-full border flex items-center justify-center disabled:opacity-30"
@@ -81,6 +82,7 @@ export default function GuideSection() {
             </button>
 
             <button
+              aria-label="scroll right"
               disabled={!canRight}
               onClick={() => scroll("right")}
               className="size-11 rounded-full border flex items-center justify-center disabled:opacity-30"
@@ -94,12 +96,17 @@ export default function GuideSection() {
         <div
           ref={sliderRef}
           onScroll={updateButtons}
-          className="flex gap-4 overflow-x-hidden scroll-smooth snap-x snap-mandatory scrollbar-none">
+          className="flex gap-4 overflow-x-hidden scroll-smooth snap-x snap-mandatory scrollbar-none"
+        >
           {DATA.map((item, i) => (
             <div
               key={i}
-              className="guide-card snap-start shrink-0 w-[85%] sm:w-[48%] lg:w-[32%] bg-white rounded-2xl">
-              <img src={item.img} className="w-full object-contain rounded-xl" />
+              className="guide-card snap-start shrink-0 w-[85%] sm:w-[48%] lg:w-[32%] bg-white rounded-2xl"
+            >
+              <img
+                src={item.img}
+                className="w-full object-contain rounded-xl"
+              />
 
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -111,7 +118,10 @@ export default function GuideSection() {
 
         {/* CTA */}
         <div className="mt-16 flex justify-start">
-          <button className="cursor-pointer bg-orange-500 text-white px-8 py-4 rounded-full">
+          <button
+            className="cursor-pointer bg-orange-500 text-white px-8 py-4 rounded-full"
+            aria-label="book blood test page"
+          >
             Book my blood test →
           </button>
         </div>

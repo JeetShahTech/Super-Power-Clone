@@ -36,6 +36,7 @@ export default function ProductsSection() {
           <div className="flex gap-3">
             {/* LEFT */}
             <button
+              aria-label="left scroll"
               onClick={() => scrollSlider("left")}
               className="w-16 h-16 bg-white shadow-md flex items-center justify-center active:scale-95"
             >
@@ -44,6 +45,7 @@ export default function ProductsSection() {
 
             {/* RIGHT */}
             <button
+              aria-label="right scroll"
               onClick={() => scrollSlider("right")}
               className="w-16 h-16 bg-white shadow-md flex items-center justify-center active:scale-95"
             >
