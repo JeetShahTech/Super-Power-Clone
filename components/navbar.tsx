@@ -19,15 +19,16 @@ function Navbar() {
   console.log("CATEGORIES:", categories);
   console.log("CATEGORY NAMES:", Object.keys(categories));
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 lg:pt-8 overflow-visible">
-      <div className="w-full lg:px-8">
+    <header className="fixed top-0 inset-x-0 z-50 lg:pt-8 overflow-visible">
+      <div className="w-full lg:px-6">
         {/* Floating Pill Container */}
-        <nav className="w-full flex items-center bg-gradient-to-r from-[#474342] to-[#4b403f] px-4 lg:px-8 py-3 shadow-xl backdrop-blur-md lg:max-w-7xl lg:mx-auto lg:rounded-full border border-white/10 overflow-visible">
-          <div className="flex flex-1 items-center min-w-0">
+        <nav
+          className="w-full max-w-[85rem] mx-auto h-14 lg:h-[5rem] flex items-center justify-between px-4 lg:px-6 rounded-none lg:rounded-full lg:bg-black/70 backdrop-blur-xl border border-white/10 shadow-lg">
+          <div className="flex items-center">
             {/* LEFT — Logo */}
             <Link href="/" className="w-28 sm:w-32 lg:w-40 text-white">
               <svg
-                className="text-white"
+                className="text-black lg:text-white"
                 width="100%"
                 height="100%"
                 viewBox="0 0 222 30"
@@ -93,19 +94,18 @@ function Navbar() {
           <div className="flex flex-1 justify-end items-center gap-6 min-w-0">
             <Link
               href="/howitworkspage"
-              className="cursor-pointer text-white font- hover:text-orange-400 transition"
+              className="cursor-pointer text-black lg:text-white font- hover:text-orange-400 transition"
             >
               How it Works
             </Link>
-            
+
             <a
               href="https://app.superpower.com/signin?_gl=1*1e7ruqg*_gcl_au*Njg1MzY2MTk3LjE3NzAwMTU2Mjg.*_ga*MTg3NTk2MzkyLjE3NzAwMTU2Mjg.*_ga_BT53JGR46J*czE3NzA4MDU1NzkkbzI3JGcxJHQxNzcwODA1NTk4JGo0MSRsMCRoMA.."
-              className="cursor-pointer text-white font-medium hover:text-orange-400 transition"
+              className="cursor-pointer text-black lg:text-white font-medium hover:text-orange-400 transition"
             >
               Login
             </a>
 
-            
             <a
               href="https://app.superpower.com/register"
               className="cursor-pointer hidden lg:block bg-orange-500 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg hover:shadow-orange-500/30"

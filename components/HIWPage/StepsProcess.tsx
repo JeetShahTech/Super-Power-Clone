@@ -85,9 +85,8 @@ export default function StepsProcess() {
           </div>
 
           {/* CENTER — TIMELINE */}
-          <div className="flex flex-col items-center relative">
-            {/* label */}
-            <span className="mt-4 px-3 py-1 bg-orange-600 text-white text-sm rounded whitespace-nowrap">
+          <div className="flex flex-col items-start lg:items-center relative w-full lg:w-auto">
+            <span className="mt-2 lg:mt-4 px-3 py-1 bg-orange-600 text-white text-sm rounded whitespace-nowrap">
               Today
             </span>
           </div>
@@ -137,8 +136,8 @@ export default function StepsProcess() {
           </div>
 
           {/* CENTER — TIMELINE */}
-          <div className="flex flex-col items-center relative">
-            <span className="mt-4 px-3 py-1 bg-orange-600 text-white text-sm rounded whitespace-nowrap">
+          <div className="flex flex-col items-start lg:items-center relative w-full lg:w-auto">
+            <span className="mt-2 lg:mt-4 px-3 py-1 bg-orange-600 text-white text-sm rounded whitespace-nowrap">
               Day 5
             </span>
           </div>
@@ -188,8 +187,8 @@ export default function StepsProcess() {
           </div>
 
           {/* CENTER — TIMELINE */}
-          <div className="flex flex-col items-center relative">
-            <span className="mt-4 px-3 py-1 bg-orange-600 text-white text-sm rounded whitespace-nowrap">
+          <div className="flex flex-col items-start lg:items-center relative w-full lg:w-auto">
+            <span className="mt-2 lg:mt-4 px-3 py-1 bg-orange-600 text-white text-sm rounded whitespace-nowrap">
               Day 10
             </span>
           </div>
