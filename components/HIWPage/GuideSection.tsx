@@ -98,8 +98,8 @@ export default function GuideSection() {
           {DATA.map((item, i) => (
             <div
               key={i}
-              className="guide-card snap-start shrink-0 w-[85%] sm:w-[48%] lg:w-[32%] bg-white rounded-2xl overflow-hidden">
-              <img src={item.img} className="w-full h-64 object-contain" />
+              className="guide-card snap-start shrink-0 w-[85%] sm:w-[48%] lg:w-[32%] bg-white rounded-2xl">
+              <img src={item.img} className="w-full object-contain rounded-xl" />
 
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>

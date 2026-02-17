@@ -21,7 +21,5 @@ export const selectProductsByCategory = createSelector(
   },
 );
 
-export const selectAllBundlesFlat = createSelector(
-  [selectBundles],
-  (bundles): ProductBundle[] => bundles,
-);
+export const selectAllBundlesFlat = (state: RootState): ProductBundle[] =>
+  state.products.bundles || [];

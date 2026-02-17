@@ -9,7 +9,7 @@ function IntroSection() {
 
   useGSAP(() => {
     ScrollTrigger.matchMedia({
-      // ✅ Desktop + Tablet (>=768px)
+     
       "(min-width: 768px)": () => {
         gsap.from(IntroRef.current, {
           opacity: 0,
@@ -25,9 +25,9 @@ function IntroSection() {
         });
       },
 
-      // ❌ Mobile (<768px) → No animation
+     
       "(max-width: 767px)": () => {
-        // do nothing
+       
       },
     });
   }, []);
@@ -126,8 +126,8 @@ function IntroSection() {
             </div>
           </div>
 
-          {/* RIGHT IMAGE — 20% */}
-          <div className="w-[20%] min-w-0 h-full relative">
+         
+          <div className="w-[20%] min-w-0 relative">
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68a7a91e594b8d4029a38fb8_Group%201410124615.avif"
               className="w-full h-full object-cover rounded-2xl"

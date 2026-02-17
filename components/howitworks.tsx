@@ -136,7 +136,7 @@ function HowItWorks() {
             {/* IMAGE */}
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed15e90d22210f8cc53_Img%20Frame.avif"
-              className="w-full h-[240px] object-cover rounded-xl mb-10"
+              className="w-full h-[240px] object-contain rounded-xl mb-10"
             />
 
             {/* NUMBER */}
@@ -150,8 +150,8 @@ function HowItWorks() {
                 Test your whole body
               </h3>
               <p className="text-gray-600">
-                Get a comprehensive blood draw at one of our 2,000+ partner
-                labs.
+                Get a comprehensive blood draw at one of our 2,000+ partner labs
+                or from the comfort of your own home.
               </p>
             </div>
           </div>
@@ -160,7 +160,7 @@ function HowItWorks() {
           <div id="col-2" className="relative z-10">
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed15e90d22210f8cc56_Img%20Frame-1.avif"
-              className="w-full h-[240px] object-cover rounded-xl mb-10"
+              className="w-full h-[240px] object-contain rounded-xl mb-10"
             />
 
             <div className="hiw-number w-12 h-12 bg-orange-400 flex items-center justify-center font-bold mb-8">
@@ -170,7 +170,8 @@ function HowItWorks() {
             <div className="hiw-text">
               <h3 className="text-xl font-semibold mb-3">An actionable plan</h3>
               <p className="text-gray-600">
-                Easy to understand results and clear health plan.
+                Easy to understand results and a clear health plan with tailored
+                recommendations on diet, lifestyle changes & supplements.
               </p>
             </div>
           </div>
@@ -179,7 +180,7 @@ function HowItWorks() {
           <div id="col-3" className="relative z-10">
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed1b9ed1cceda29fecc_Img%20Frame-2.avif"
-              className="w-full h-[240px] object-cover rounded-xl mb-10"
+              className="w-full h-[240px] object-contain rounded-xl mb-10"
             />
 
             <div className="hiw-number w-12 h-12 bg-orange-400 flex items-center justify-center font-bold mb-8">
@@ -191,7 +192,8 @@ function HowItWorks() {
                 A connected ecosystem
               </h3>
               <p className="text-gray-600">
-                Book diagnostics and buy curated supplements.
+                You can book additional diagnostics, buy curated supplements
+                with members-only discounts in your Superpower dashboard.
               </p>
             </div>
           </div>
