@@ -1,4 +1,7 @@
 "use client";
+import { useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function Dot({ text, className }: { text: string; className: string }) {
   return (
@@ -21,6 +24,35 @@ function Dot({ text, className }: { text: string; className: string }) {
 }
 
 export default function HeroHIW() {
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useGSAP(() => {
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1024px)", () => {
+      if (!imageRef.current) return;
+
+      gsap.fromTo(
+        imageRef.current,
+        {
+          opacity: 0,
+          y: -20,
+          scale: 1.08,
+          filter: "blur(6px)",
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          filter: "blur(0px)",
+          duration: 0.55,
+          ease: "power3.out",
+          delay: 0.15,
+        },
+      );
+    });
+  }, []);
+
   return (
     <section className="w-full flex justify-center lg:p-2">
       {/* HERO CARD */}
@@ -40,6 +72,7 @@ export default function HeroHIW() {
         {/* RIGHT IMAGE */}
         <div className="relative w-full flex justify-center lg:absolute lg:inset-0 pointer-events-none">
           <img
+            ref={imageRef}
             src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68dc40167f31dd1a1cdae60f_sp-hiw-hero.avif"
             alt="How it works"
             className="relative mt-4 w-[85%] sm:w-[70%] md:w-[55%] lg:absolute lg:bottom-0 lg:right-[12%] lg:h-[82%] lg:w-auto object-contain object-bottom select-none"
