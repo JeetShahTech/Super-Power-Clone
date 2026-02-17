@@ -1,5 +1,28 @@
 Commit History :-
 
+commit 124a80d00842650543d1e0fcd8551c66816fde28 (HEAD -> main, origin/main)
+Author: Jeet Shah <jeetshah1005@gmail.com>
+Date:   Tue Feb 17 16:04:52 2026 +0530
+
+    SEO improvements
+
+commit 5f6be9e141e1ebd1b49d22bbfe24e35b35ca1941
+Merge: 57836ad 6c8f56b
+Author: JeetShahTech <jeets@techlusion.io>
+Date:   Tue Feb 17 15:08:39 2026 +0530
+
+    Merge pull request #7 from JeetShahTech/Howitworks
+
+    Error and loading files added
+    Git history added
+    Other small changes merging
+
+commit 6c8f56b5ada7878cff58bf604ad6f7fc36389db6 (origin/Howitworks, Howitworks)
+Author: Jeet Shah <jeetshah1005@gmail.com>
+Date:   Tue Feb 17 15:06:50 2026 +0530
+
+    Loading and error files added
+
 commit 3eeeb049a55bd2ff56249e56aa184ad026d4e211 (HEAD -> Howitworks)
 Author: Jeet Shah <jeetshah1005@gmail.com>
 Date:   Tue Feb 17 13:54:28 2026 +0530
@@ -123,26 +146,29 @@ After-
 
 Reflog history :-
 
-3eeeb04 (HEAD -> Howitworks) HEAD@{0}: commit (amend): Added Animation to Herosec in Howitworks page along with other UI improvements
-8970656 HEAD@{1}: commit: Further UI Improvements
-a9a9c75 HEAD@{2}: commit: Performance Improvements
-06fff9e (origin/Howitworks) HEAD@{3}: commit: feat: UI improvements
-b0656e6 HEAD@{4}: commit: feat : Made UI and responsiveness changes
-3ca6ea1 HEAD@{5}: checkout: moving from home to Howitworks
-ffdcb93 (origin/home, home) HEAD@{6}: checkout: moving from Howitworks to home
-3ca6ea1 HEAD@{7}: commit: feat: Stats Section done
-4a5a32f HEAD@{8}: commit: feat: Second Page execution
-3b5fb1b (origin/main, main) HEAD@{9}: checkout: moving from main to Howitworks
-3b5fb1b (origin/main, main) HEAD@{10}: pull origin main: Fast-forward
-2e680f4 HEAD@{11}: checkout: moving from home to main
-ffdcb93 (origin/home, home) HEAD@{12}: commit: Hero section on How it works page done
-cef0908 HEAD@{13}: commit: feat: FAQ and testimonials section done
-57a1bc9 HEAD@{14}: commit: feat :Product Slider section
-e8e8462 HEAD@{15}: commit: How it Works section added
-abf3dc3 HEAD@{16}: commit: Labs Intro Section implemented
-ca34b88 HEAD@{17}: commit: feat:navbar categories fetched
-2e680f4 HEAD@{18}: checkout: moving from main to home
-2e680f4 HEAD@{19}: commit: Initialized project
-6229c47 HEAD@{20}: commit (initial): Initial commit from Create Next App
-
+124a80d (HEAD -> main, origin/main) HEAD@{0}: commit: SEO improvements
+5f6be9e HEAD@{1}: pull origin main: Fast-forward
+3b5fb1b HEAD@{2}: checkout: moving from Howitworks to main
+6c8f56b (origin/Howitworks, Howitworks) HEAD@{3}: commit: Loading and error files added
+3eeeb04 HEAD@{4}: commit (amend): Added Animation to Herosec in Howitworks page along with other UI improvements
+8970656 HEAD@{5}: commit: Further UI Improvements
+a9a9c75 HEAD@{6}: commit: Performance Improvements
+06fff9e HEAD@{7}: commit: feat: UI improvements
+b0656e6 HEAD@{8}: commit: feat : Made UI and responsiveness changes
+3ca6ea1 HEAD@{9}: checkout: moving from home to Howitworks
+ffdcb93 (origin/home, home) HEAD@{10}: checkout: moving from Howitworks to home
+3ca6ea1 HEAD@{11}: commit: feat: Stats Section done
+4a5a32f HEAD@{12}: commit: feat: Second Page execution
+3b5fb1b HEAD@{13}: checkout: moving from main to Howitworks
+3b5fb1b HEAD@{14}: pull origin main: Fast-forward
+2e680f4 HEAD@{15}: checkout: moving from home to main
+ffdcb93 (origin/home, home) HEAD@{16}: commit: Hero section on How it works page done
+cef0908 HEAD@{17}: commit: feat: FAQ and testimonials section done
+57a1bc9 HEAD@{18}: commit: feat :Product Slider section
+e8e8462 HEAD@{19}: commit: How it Works section added
+abf3dc3 HEAD@{20}: commit: Labs Intro Section implemented
+ca34b88 HEAD@{21}: commit: feat:navbar categories fetched
+2e680f4 HEAD@{22}: checkout: moving from main to home
+2e680f4 HEAD@{23}: commit: Initialized project
+6229c47 HEAD@{24}: commit (initial): Initial commit from Create Next App
 
