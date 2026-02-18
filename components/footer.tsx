@@ -52,7 +52,7 @@ const FOOTER_DATA = [
 ];
 
 const mainColumns = FOOTER_DATA.slice(0, 4);
-const lastColumn = FOOTER_DATA.slice(4); // Partnerships + Connect
+const lastColumn = FOOTER_DATA.slice(4); 
 
 /* COLUMN */
 
@@ -61,7 +61,7 @@ function FooterColumn({ title, items }: { title: string; items: string[] }) {
 
   return (
     <div className="border-b md:border-none py-4">
-      {/* Heading */}
+    
       <button
       aria-label="footeritem"
         onClick={() => setOpen(!open)}
@@ -71,7 +71,7 @@ function FooterColumn({ title, items }: { title: string; items: string[] }) {
         <span className="md:hidden text-lg">⌄</span>
       </button>
 
-      {/* Content */}
+     
       <div
         className={`
           grid transition-all duration-300
@@ -89,7 +89,7 @@ function FooterColumn({ title, items }: { title: string; items: string[] }) {
                 key={i}
                 className="flex items-center gap-2 text-[15px] text-zinc-800 hover:text-[#fc5f2b] cursor-pointer"
               >
-                {/* Chevron Icon */}
+                
                 <img
                   src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/66668bc209003e2545cbca73_chevron-orange.svg"
                   alt="footer icon"
@@ -120,7 +120,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-200 rounded-[70px] pt-28 pb-14 mt-16">
-      {/* Masked Logo */}
+      
       <div className="logo-mask">
         
         <img
@@ -145,7 +145,7 @@ export default function Footer() {
           />
         </video>
 
-        {/* fallback */}
+       
         <img
           className="logo-fallback"
           src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/65b8f55bef05d8426623a612_sp-logo-black.svg"
@@ -153,14 +153,14 @@ export default function Footer() {
         />
       </div>
 
-      {/* Columns */}
+      
       <div className="w-full mx-auto px-6 grid md:grid-cols-5 gap-8">
-        {/* First 4 columns */}
+        
         {mainColumns.map((col, i) => (
           <FooterColumn key={i} title={col.title} items={col.items} />
         ))}
 
-        {/* Last stacked column */}
+        
         <div className="flex flex-col gap-2">
           {lastColumn.map((col, i) => (
             <FooterColumn key={i} title={col.title} items={col.items} />
@@ -168,7 +168,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom */}
+      
       <div className="w-full mx-auto px-6 mt-20 pt-8 border-t text-sm text-zinc-500 flex flex-col md:flex-row justify-between gap-4">
         <p>
           © {new Date().getFullYear()} Superpower Health, Inc. All rights

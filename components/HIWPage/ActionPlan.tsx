@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-/* ---------- BUTTON ---------- */
+
 
 function ViewSample({ isBlack }: { isBlack: boolean }) {
   return (
@@ -35,7 +35,7 @@ function ViewSample({ isBlack }: { isBlack: boolean }) {
   );
 }
 
-/* ---------- SECTION ---------- */
+
 
 function ActionPlan() {
   return (
@@ -44,7 +44,7 @@ function ActionPlan() {
       className="w-full flex flex-col items-center py-16 md:py-24 px-6 overflow-hidden"
     >
       <div className="w-full max-w-7xl flex flex-col gap-10">
-        {/* Heading */}
+        
         <div className="flex flex-col gap-3">
           <h2 className="text-[2.4rem] md:text-[3.4rem] font-semibold tracking-[-0.02em]">
             Compare our Action Plans
@@ -54,11 +54,11 @@ function ActionPlan() {
           </p>
         </div>
 
-        {/* Cards */}
+        
         <div className="grid grid-cols-1 min-[1024px]:grid-cols-2 gap-10 lg:gap-14 w-full">
-          {/* SUPERPOWER PLAN */}
+          
           <div className="group relative bg-white border border-[#fc5f2b] rounded-[2.25rem] p-10 md:p-14 h-[360px] md:h-[420px] overflow-hidden flex flex-col">
-            {/* Logo */}
+            
             <div className="relative z-20 flex flex-col items-start w-fit">
               <Image
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68756d60749a9d4add4303c6_superpower-logo.svg"
@@ -72,12 +72,12 @@ function ActionPlan() {
               </p>
             </div>
 
-            {/* Button */}
+            
             <div className="relative z-20 mt-auto pt-6">
               <ViewSample isBlack={true} />
             </div>
 
-            {/* Background art */}
+            
             <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none">
               <Image
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf490357c25d2fac6cc61f_Nature%20Superpower%201.avif"
@@ -87,7 +87,7 @@ function ActionPlan() {
               />
             </div>
 
-            {/* Floating document */}
+            
             <div className="absolute right-[-12%] bottom-[-18%] w-[85%] h-[100%] z-10 transition-transform duration-500 ease-out group-hover:scale-105">
               <Image
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68ddb5146c331cb64685a697_Frame%2016.avif"
@@ -98,7 +98,7 @@ function ActionPlan() {
             </div>
           </div>
 
-          {/* GENERAL CHECKUP */}
+          
           <div className="group relative bg-[#f4f4f4] rounded-[2.25rem] p-10 md:p-14 h-[360px] md:h-[420px] overflow-hidden flex flex-col">
             <div className="relative z-20">
               <h3 className="text-xl font-medium text-black">
@@ -110,7 +110,7 @@ function ActionPlan() {
               <ViewSample isBlack={false} />
             </div>
 
-            {/* Floating document */}
+            
             <div className="absolute right-[-12%] bottom-[-18%] w-[85%] h-[100%] z-10 transition-transform duration-500 ease-out group-hover:scale-105">
               <Image
                 src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf49e24405bd4261bb8306_Group%201321315803.avif"
@@ -122,7 +122,7 @@ function ActionPlan() {
           </div>
         </div>
 
-        {/* CTA */}
+        
         <div className="flex justify-center mt-14 md:mt-20">
           <a
             href="#"

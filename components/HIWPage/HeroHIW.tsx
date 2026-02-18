@@ -6,16 +6,16 @@ import { useGSAP } from "@gsap/react";
 function Dot({ text, className }: { text: string; className: string }) {
   return (
     <div className={`absolute flex items-center gap-3 ${className}`}>
-      {/* DOT */}
+     
       <div className="relative flex items-center justify-center">
-        {/* outer ring */}
+        
         <span className="absolute w-3 h-3 border border-white/40"></span>
 
-        {/* main dot */}
+        
         <span className="w-1 h-1 bg-white"></span>
       </div>
 
-      {/* TEXT */}
+     
       <span className="text-white text-sm font-medium tracking-tight">
         {text}
       </span>
@@ -55,9 +55,9 @@ export default function HeroHIW() {
 
   return (
     <section className="w-full flex justify-center lg:p-2">
-      {/* HERO CARD */}
+      
       <div className="relative w-full min-h-[620px] lg:h-[560px] lg:min-h-0 overflow-hidden flex flex-col lg:flex-row justify-start lg:items-center bg-[radial-gradient(circle_at_60%,#7a725f,#464133)]">
-        {/* LEFT CONTENT */}
+        
         <div className="relative z-10 w-full lg:w-1/2 px-6 pt-16 pb-6 lg:pl-20 lg:pr-6 lg:py-0 text-left">
           <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.05]">
             How it works
@@ -69,7 +69,7 @@ export default function HeroHIW() {
           </p>
         </div>
 
-        {/* RIGHT IMAGE */}
+        
         <div className="relative w-full flex justify-center lg:absolute lg:inset-0 pointer-events-none">
           <img
             ref={imageRef}
@@ -78,7 +78,7 @@ export default function HeroHIW() {
             className="relative mt-4 w-[85%] sm:w-[70%] md:w-[55%] lg:absolute lg:bottom-0 lg:right-[12%] lg:h-[82%] lg:w-auto object-contain object-bottom select-none"
           />
 
-          {/* FLOATING DOTS */}
+         
           <Dot
             text="Reduce fatigue"
             className=" absolute top-[38%] left-[58%] sm:top-[40%] sm:left-[60%] lg:top-[29%] lg:left-[78%]"

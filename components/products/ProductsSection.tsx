@@ -29,12 +29,12 @@ export default function ProductsSection() {
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-        {/* HEADER */}
+       
         <div className="flex justify-between items-center mb-10">
           <h2 className="text-4xl font-serif">Products</h2>
 
           <div className="flex gap-3">
-            {/* LEFT */}
+            
             <button
               aria-label="left scroll"
               onClick={() => scrollSlider("left")}
@@ -43,7 +43,7 @@ export default function ProductsSection() {
               ←
             </button>
 
-            {/* RIGHT */}
+            
             <button
               aria-label="right scroll"
               onClick={() => scrollSlider("right")}
@@ -54,13 +54,16 @@ export default function ProductsSection() {
           </div>
         </div>
 
-        {/* SLIDER */}
+       
         <div
           ref={sliderRef}
           className="flex gap-6 overflow-x-hidden scroll-smooth snap-x snap-mandatory no-scrollbar"
         >
           {products.map((product, index) => (
-            <div key={index} className="snap-start shrink-0">
+            <div
+              key={index}
+              className="snap-start shrink-0 w-[85vw] sm:w-[65vw] lg:w-auto"
+            >
               <ProductCard product={product} />
             </div>
           ))}

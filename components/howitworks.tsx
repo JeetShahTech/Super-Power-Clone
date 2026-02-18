@@ -22,7 +22,7 @@ function HowItWorks() {
         },
       });
 
-      // LINE + COL2
+      
       tl.to(".progress-line", {
         scaleX: 0.6,
         ease: "none",
@@ -59,7 +59,7 @@ function HowItWorks() {
           "<",
         );
 
-      // LINE + COL3
+      
       tl.to(".progress-line", {
         scaleX: 1,
         ease: "none",
@@ -121,8 +121,8 @@ function HowItWorks() {
       ref={sectionRef}
       className="bg-blue-50 py-5 relative overflow-hidden"
     >
-      {/* TITLE */}
-      <div className="max-w-7xl mx-auto px-4 mb-16">
+      
+      <div className="max-w-7xl mx-auto px-4 mb-10">
         <h1 className="text-3xl md:text-5xl font-serif">How it Works</h1>
       </div>
 
@@ -130,24 +130,24 @@ function HowItWorks() {
         <div className="progress-line h-[2px] bg-orange-400 origin-left scale-x-0" />
       </div>
 
-      {/* GRID */}
+      
       <div className="max-w-7xl mx-auto px-4 hidden md:block">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
-          {/* COLUMN 1 */}
+          
           <div id="col-1" className="relative z-10">
-            {/* IMAGE */}
+            
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed15e90d22210f8cc53_Img%20Frame.avif"
               alt="test-image"
               className="w-full h-[240px] object-contain rounded-xl mb-10"
             />
 
-            {/* NUMBER */}
+            
             <div className="hiw-number w-12 h-12 bg-orange-400 flex items-center justify-center font-bold mb-8">
               1
             </div>
 
-            {/* TEXT */}
+            
             <div className="hiw-text">
               <h3 className="text-xl font-semibold mb-3">
                 Test your whole body
@@ -159,7 +159,7 @@ function HowItWorks() {
             </div>
           </div>
 
-          {/* COLUMN 2 */}
+         
           <div id="col-2" className="relative z-10">
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed15e90d22210f8cc56_Img%20Frame-1.avif"
@@ -180,7 +180,7 @@ function HowItWorks() {
             </div>
           </div>
 
-          {/* COLUMN 3 */}
+          
           <div id="col-3" className="relative z-10">
             <img
               src="https://cdn.prod.website-files.com/63792ff4f3d6aa3d62071b61/68bf3ed1b9ed1cceda29fecc_Img%20Frame-2.avif"
@@ -209,7 +209,7 @@ function HowItWorks() {
       <div className="relative max-w-5xl mx-auto px-4 md:hidden">
         <div className="progress-line-mobile absolute left-8 top-0 bottom-0 w-[2px] bg-orange-400 origin-top scale-y-0" />
         <div className="space-y-20">
-          {/* ITEM 1 */}
+          
           <div className="grid grid-cols-[28px_1fr] gap-3 relative">
             <div className="relative">
               <div className="absolute left-4 -translate-x-1/2 w-8 h-8 bg-orange-400 text-white flex items-start justify-center font-bold text-sm">
@@ -234,7 +234,7 @@ function HowItWorks() {
             </div>
           </div>
 
-          {/* ITEM 2 */}
+        
           <div className="grid grid-cols-[28px_1fr] gap-3 relative">
             <div className="relative">
               <div className="absolute left-4 -translate-x-1/2 w-8 h-8 bg-orange-400 text-white flex items-start justify-center font-bold text-sm">
@@ -257,7 +257,7 @@ function HowItWorks() {
             </div>
           </div>
 
-          {/* ITEM 3 */}
+          
           <div className="grid grid-cols-[28px_1fr] gap-3 relative">
             <div className="relative">
               <div className="absolute left-4 -translate-x-1/2 w-8 h-8 bg-orange-400 text-white flex items-start justify-center font-bold text-sm">

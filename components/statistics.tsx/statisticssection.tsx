@@ -11,16 +11,16 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Statistics() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  // number refs
+ 
   const num70 = useRef<HTMLSpanElement>(null);
   const num63 = useRef<HTMLSpanElement>(null);
   const num44 = useRef<HTMLSpanElement>(null);
 
-  // bars
+ 
   const bar63 = useRef<HTMLDivElement>(null);
   const bar44 = useRef<HTMLDivElement>(null);
 
-  // markers
+  
   const mark63 = useRef<HTMLDivElement>(null);
   const mark44 = useRef<HTMLDivElement>(null);
 
@@ -34,7 +34,7 @@ export default function Statistics() {
         },
       });
 
-      // helper
+     
       const animateStat = (
         target: number,
         numberRef: React.RefObject<HTMLSpanElement | null>,
@@ -43,11 +43,11 @@ export default function Statistics() {
       ) => {
         const obj = { val: 0 };
 
-        // 👉 set bar + marker instantly (ONLY ONCE)
+        
         if (barRef?.current) barRef.current.style.width = `${target}%`;
         if (markRef?.current) markRef.current.style.left = `${target}%`;
 
-        // 👉 animate only number
+        
         tl.to(
           obj,
           {
@@ -78,7 +78,7 @@ export default function Statistics() {
       className="w-full bg-[#f4f4f5] py-16 md:py-24 flex justify-center"
     >
       <div className="max-w-7xl w-full px-6">
-        {/* Heading */}
+       
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-medium leading-tight">
             <span className="text-zinc-400">Members see results</span>
@@ -86,9 +86,9 @@ export default function Statistics() {
           </h2>
         </div>
 
-        {/* Cards */}
+        
         <div className="grid lg:grid-cols-2 gap-4">
-          {/* BIG LEFT CARD */}
+          
           <div className="bg-white rounded-2xl p-8 flex flex-col justify-between min-h-[380px]">
             <div className="text-[4.2rem] font-semibold leading-none">
               <span ref={num70}>0</span>%
@@ -105,9 +105,9 @@ export default function Statistics() {
             />
           </div>
 
-          {/* RIGHT SIDE */}
+         
           <div className="flex flex-col gap-4">
-            {/* Diabetes */}
+           
             <div className="bg-white rounded-2xl p-8">
               <div className="text-[3.4rem] font-semibold">
                 <span ref={num63}>0</span>%
@@ -117,7 +117,7 @@ export default function Statistics() {
                 find early risk factors for diabetes
               </p>
 
-              {/* bar */}
+              
               <div className="relative h-2 bg-zinc-200 rounded-full">
                 <div
                   ref={bar63}
@@ -144,7 +144,7 @@ export default function Statistics() {
               </div>
             </div>
 
-            {/* Heart */}
+           
             <div className="bg-white rounded-2xl p-8">
               <div className="text-[3.4rem] font-semibold">
                 <span ref={num44}>0</span>%
@@ -154,7 +154,7 @@ export default function Statistics() {
                 find elevated heart disease risk
               </p>
 
-              {/* bar */}
+             
               <div className="relative h-2 bg-zinc-200 rounded-full">
                 <div
                   ref={bar44}

@@ -39,7 +39,7 @@ export default function MembershipVisualTabs() {
 
   return (
     <div className="membership_left">
-      {/* MAIN DISPLAY AREA */}
+      
       <div className="bg-white rounded-3xl p-8 shadow-sm mb-6">
         {tabs[activeTab].type === "card" ? (
           <MembershipCardVisual />
@@ -52,7 +52,7 @@ export default function MembershipVisualTabs() {
         )}
       </div>
 
-      {/* THUMBNAILS */}
+      
       <div className="flex gap-4 justify-center lg:justify-start flex-wrap">
         {tabs.map((tab, index) => (
           <button

@@ -10,7 +10,7 @@ export default function StoreInitializer() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    // runs once when app loads
+    
     dispatch(fetchProductBundles());
     dispatch(fetchTestimonials()); 
     dispatch(fetchFaq("senavida"));

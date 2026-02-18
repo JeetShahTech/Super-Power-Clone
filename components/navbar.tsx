@@ -21,11 +21,11 @@ function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 lg:pt-8 overflow-visible">
       <div className="w-full lg:px-6">
-        {/* Floating Pill Container */}
+        
         <nav
           className="w-full max-w-[85rem] mx-auto h-14 lg:h-[5rem] flex items-center justify-between px-4 lg:px-6 rounded-none lg:rounded-full lg:bg-black/70 backdrop-blur-xl border border-white/10 shadow-lg">
           <div className="flex items-center">
-            {/* LEFT — Logo */}
+            
             <Link href="/" className="w-28 sm:w-32 lg:w-40 text-white">
               <svg
                 className="text-black lg:text-white"
@@ -43,7 +43,7 @@ function Navbar() {
             </Link>
           </div>
 
-          {/* CENTER — Dynamic Categories (Placeholder Now) */}
+          
           <div className="hidden lg:flex flex-[2] justify-center min-w-0">
             <div className="flex items-center gap-8 cursor-pointer text-white hover:text-gray-500 font-medium relative">
               {loading && <span>Loading...</span>}
@@ -58,11 +58,11 @@ function Navbar() {
                   >
                     {category}
 
-                    {/* DROPDOWN */}
+                    
                     {activeCategory === category && (
                       <div className="absolute top-full left-1/2 -translate-x-1/2  w-[560px] bg-white text-black shadow-2xl p-6 z-[999]">
                         <div className="flex gap-6">
-                          {/* LEFT — CATEGORY IMAGE */}
+                          
                           <div className="w-[45%]">
                             <img
                               src={categories[category]?.[0]?.imageUrl}
@@ -71,7 +71,7 @@ function Navbar() {
                             />
                           </div>
 
-                          {/* RIGHT — PRODUCT LIST */}
+                          
                           <div className="flex-1 grid grid-cols-2 gap-x-8 gap-y-3 content-center">
                             {categories[category]?.map((product) => (
                               <div
@@ -90,7 +90,7 @@ function Navbar() {
             </div>
           </div>
 
-          {/* RIGHT — Auth + CTA */}
+          
           <div className="flex flex-1 justify-end items-center gap-6 min-w-0">
             <Link
               href="/howitworkspage"

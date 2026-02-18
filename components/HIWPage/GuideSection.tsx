@@ -61,7 +61,7 @@ export default function GuideSection() {
   return (
     <section className="w-full py-28">
       <div className="max-w-7xl mx-auto px-6">
-        {/* HEADING + BUTTONS */}
+        
         <div className="flex justify-between items-start mb-14">
           <div>
             <p className="text-zinc-500 mb-3">After your health plan</p>
@@ -70,7 +70,7 @@ export default function GuideSection() {
             </h2>
           </div>
 
-          {/* BUTTONS */}
+          
           <div className="flex gap-3">
             <button
               aria-label="scroll left"
@@ -92,7 +92,7 @@ export default function GuideSection() {
           </div>
         </div>
 
-        {/* SLIDER */}
+       
         <div
           ref={sliderRef}
           onScroll={updateButtons}
@@ -116,7 +116,7 @@ export default function GuideSection() {
           ))}
         </div>
 
-        {/* CTA */}
+        
         <div className="mt-16 flex justify-start">
           <button
             className="cursor-pointer bg-orange-500 text-white px-8 py-4 rounded-full"

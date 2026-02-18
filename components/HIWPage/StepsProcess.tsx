@@ -16,13 +16,13 @@ export default function StepsProcess() {
     mm.add("(min-width: 1024px)", () => {
       const steps = gsap.utils.toArray<HTMLElement>(".hiw-step");
 
-      // STACK STEPS
+      
       gsap.set(steps, {
         position: "absolute",
         inset: 0,
       });
 
-      // INITIAL STATE
+     
       gsap.set(steps[0], { opacity: 1, y: 0 });
 
       const tl = gsap.timeline({
@@ -35,14 +35,14 @@ export default function StepsProcess() {
         },
       });
 
-      // STEP 1 → STEP 2
+      
       tl.fromTo(
         steps[1],
         { opacity: 0, y: 400 },
         { opacity: 1, y: 0, duration: 1 },
       ).to(steps[0], { opacity: 0, y: 0, scale: 0.8, duration: 1 }, "<-=0.4");
 
-      // STEP 2 → STEP 3
+      
       tl.fromTo(
         steps[2],
         { opacity: 0, y: 400 },
@@ -70,10 +70,10 @@ export default function StepsProcess() {
       ref={containerRef}
       className="relative bg-white lg:h-screen overflow-hidden lg:overflow-hidden"
     >
-      {/* STEP 1 */}
+      
       <section className="hiw-step lg:absolute lg:inset-0 flex items-center py-24 lg:py-0">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center">
-          {/* LEFT — IMAGE */}
+          
           <div className="w-full">
             <div className="relative w-full aspect-square rounded-3xl overflow-hidden bg-gray-200">
               <img
@@ -84,14 +84,14 @@ export default function StepsProcess() {
             </div>
           </div>
 
-          {/* CENTER — TIMELINE */}
+          
           <div className="flex flex-col items-start lg:items-center relative w-full lg:w-auto">
             <span className="mt-2 lg:mt-4 px-3 py-1 bg-orange-600 text-white text-sm rounded whitespace-nowrap">
               Today
             </span>
           </div>
 
-          {/* RIGHT — CONTENT */}
+          
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-serif mb-6">
               Book your lab test
@@ -121,10 +121,10 @@ export default function StepsProcess() {
         </div>
       </section>
 
-      {/* STEP 2 */}
+      
       <section className="hiw-step lg:absolute lg:inset-0 flex items-center py-24 lg:py-0">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center">
-          {/* LEFT — IMAGE */}
+          
           <div className="w-full">
             <div className="relative w-full aspect-square rounded-3xl overflow-hidden bg-gray-200">
               <img
@@ -135,14 +135,14 @@ export default function StepsProcess() {
             </div>
           </div>
 
-          {/* CENTER — TIMELINE */}
+          
           <div className="flex flex-col items-start lg:items-center relative w-full lg:w-auto">
             <span className="mt-2 lg:mt-4 px-3 py-1 bg-orange-600 text-white text-sm rounded whitespace-nowrap">
               Day 5
             </span>
           </div>
 
-          {/* RIGHT — CONTENT */}
+          
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-serif mb-6">
               Understand your results
@@ -172,10 +172,10 @@ export default function StepsProcess() {
         </div>
       </section>
 
-      {/* STEP 3 */}
+     
       <section className="hiw-step lg:absolute lg:inset-0 flex items-center py-24 lg:py-0">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center">
-          {/* LEFT — IMAGE */}
+          
           <div className="w-full">
             <div className="relative w-full aspect-square rounded-3xl overflow-hidden bg-gray-200">
               <img
@@ -186,14 +186,14 @@ export default function StepsProcess() {
             </div>
           </div>
 
-          {/* CENTER — TIMELINE */}
+          
           <div className="flex flex-col items-start lg:items-center relative w-full lg:w-auto">
             <span className="mt-2 lg:mt-4 px-3 py-1 bg-orange-600 text-white text-sm rounded whitespace-nowrap">
               Day 10
             </span>
           </div>
 
-          {/* RIGHT — CONTENT */}
+          
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-serif mb-6">
               Take Action

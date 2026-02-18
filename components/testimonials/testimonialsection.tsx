@@ -31,7 +31,7 @@ export default function TestimonialsSection() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        {/* HEADER */}
+       
         <div className="flex justify-between items-center mb-10">
           <h2 className="text-4xl font-serif">What members say</h2>
 
@@ -52,13 +52,18 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        {/* SLIDER */}
+        
         <div
           ref={sliderRef}
           className="flex gap-6 overflow-x-hidden snap-x snap-mandatory scroll-smooth no-scrollbar"
         >
           {testimonials.map((t, i) => (
-            <TestimonialCard key={i} testimonial={t} />
+            <div
+              key={i}
+              className="snap-start shrink-0 w-[85vw] sm:w-[65vw] lg:w-auto"
+            >
+              <TestimonialCard testimonial={t} />
+            </div>
           ))}
         </div>
       </div>

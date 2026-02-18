@@ -11,7 +11,7 @@ function Hero() {
   const heroRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
-    // if (!heroRef.current) return;
+    
 
     ScrollTrigger.matchMedia({
       "(min-width:1024px)": () => {
@@ -47,11 +47,11 @@ function Hero() {
       ref={heroRef}
       className="relative flex items-center justify-center bg-neutral-100 z-2"
     >
-      {/* hero content */}
+      
       <div className="w-screen h-screen p-0 lg:p-2">
-        {/* HERO CARD */}
+       
         <div className="relative flex items-center justify-center shadow-lg lg:w-[100%] lg:h-[100%] w-screen h-screen rounded-none lg:rounded-2xl overflow-hidden">
-          {/* Background Video */}
+          
           <video
             autoPlay
             muted

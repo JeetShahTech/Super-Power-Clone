@@ -63,7 +63,7 @@ export default function MembershipContent() {
         className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#ff5a2f] to-[#ff6a3d] hover:from-[#ff6a3d] hover:to-[#ff5a2f] text-white font-semibold text-lg px-12 py-4 rounded-full shadow-[0_8px_20px_rgba(255,90,47,0.25)] hover:shadow-[0_12px_28px_rgba(255,90,47,0.35)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300 ease-out w-full lg:w-auto">
         <span>Start testing</span>
 
-        {/* Arrow Icon */}
+        
         <svg
           className="hidden sm:block"
           width="22"
@@ -82,7 +82,7 @@ export default function MembershipContent() {
       </a>
 
       <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-6">
-        {/* Cancel Anytime */}
+        
         <div className="flex items-center gap-2">
           <svg
             width="17"
@@ -103,7 +103,7 @@ export default function MembershipContent() {
           <span className="text-sm text-gray-500">Cancel anytime</span>
         </div>
 
-        {/* HSA FSA */}
+        
         <div className="flex items-center gap-2">
           <svg
             width="17"
@@ -124,7 +124,6 @@ export default function MembershipContent() {
           <span className="text-sm text-gray-500">HSA/FSA eligible</span>
         </div>
 
-        {/* Results */}
         <div className="flex items-center gap-2">
           <svg
             width="17"
